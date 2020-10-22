@@ -52,15 +52,26 @@ const mean = (list) => {
   return (sum / list.length).toFixed(2)
 }
 
-const avgClaseA = mean(claseA)
-const avgClaseC = mean(claseC)
-
-console.log(avgClaseC)
   
 //4. con la misma lista obtener la mediana
   // - Ordenar la lista
   //- Validar si la cantidad de calficaciones es par o impar
   // - Tomar el valor de en medio
+const calif = [6,4,7,1,2,4,8,10,5,8,9] //Impar
+const califdos = [1,2,3,4,6,5,6] //Par
+const median = (list) => {
+    let value = 0;
+    let listSort = list.sort((a, b) => a - b)
+  if (listSort.length % 2 !== 0) {
+      value = listSort[Math.trunc(listSort.length / 2)]
+    } else {
+      const num1 = listSort[(listSort.length / 2)]
+      const num2 = listSort[(listSort.length / 2) + 1]
+      
+      value = mean([num1, num2])
+    }
+    return value
+}
 
 //5. Con la misma lista, obtener la moda
 
