@@ -44,14 +44,6 @@ app.post('/cartoon/create', async (req, res) => {
 //Read
 //Update
 //Delete
-
-
-
-
-
-
-
-
 app.listen(PORT, () => {
   console.log(`Server initialized on PORT: http://localhost:${PORT}`)
 })  
