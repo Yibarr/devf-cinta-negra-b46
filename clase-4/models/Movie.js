@@ -13,7 +13,15 @@ const movieSchema = new mongoose.Schema({
     type: String,
     enum: [ 'Science fiction', 'Horror', 'Drama' ]
   },
-
+  directors: [
+    {
+      type: mongoose.Types.ObjectId,
+      ref: 'Director'
+    }
+  ]
+}, {
+  versionKey: false,
+  timestamps: true
 })
 
 
